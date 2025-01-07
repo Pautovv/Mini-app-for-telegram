@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>JaneClicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app" draggable="false">
+        <div class="user-info" draggable="false">
+            <div class="user-name">
+                <div class="name-text">Name(CEO)</div> 
+            </div>
+            <div class="level-info">
+                <span class="level-text">Bronze</span>
+                <span class="level-num">4 / 10</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="coin-info">
+                <div class="ci-titl">
+                    <img src="pic/market.png" alt="" class="ci-titl-pic" draggable="false" /">
+                </div>
+                <div class="ci-title">
+                    <div class="ci-title-text">
+                        Прибыль в час
+                    </div>
+                </div>
+                <div class="ci-amount">
+                    <img src="pic/bitcoin.png" alt="" class="ci-amount-pic1" oncontextmenu="return false;">
+                    <span class="ci-amount-text">+50</span>
+                    <img src="pic/info.png" alt="" class="ci-amount-pic2" id="info-click" draggable="false" />
+                </div>
+                <div class="ci-settings">
+                    <img src="pic/settings.png" alt="" class="ci-settings-pic" draggable="false" />
+                </div>
+            </div>
+        </div>
+        <div class="clicker" draggable="false">
+            <div class="daily-rewards">
+                <div class="daily-bonus" id="daily-bonus-click">
+                    <img src="pic/daily-bonus.png" alt=""class="daily-bonus-pic" draggable="false" /">
+                    <div class="daily-bonus-text">Ежедневный бонус</div>
+                </div>
+                <div class="daily-code">
+                    <img src="pic/daily-password.png" alt="" class="daily-code-pic" draggable="false" /">
+                    <div class="daily-code-text">Ежедневный шифр</div>
+                </div>
+                <div class="daily-combo">
+                    <img src="pic/combo.png" alt="" class="daily-combo-pic" draggable="false" /">
+                    <div class="daily-combo-text">Комбо</div>
+                </div>
+            </div>
+            <div class="balance">
+                <img src="pic/bitcoin.png" alt="" class="balance-pic" draggable="false" /">
+                <div></br><span class="balance-text">0</span></div>
+            </div>
+            <div class="parrot">
+                <img src="pic/frog.png" alt="" class="parrot-pic" onclick="tup(event)" draggable="false" />
+            </div>
+            <div class="en-panel">
+                <div class="energy">
+                    <img src="pic/energy-bar.png" alt="" class="energy-pic" oncontextmenu="return false;">
+                    <div></br><span class="energy-text">5000</span></div>
+                    <div class="energy-dop">/</div>
+                    <div></br><span class="energy-limit">5000</span></div>
+                </div>
+                <div class="boost">
+                    <img src="pic/boost.png" alt="" class="boost-pic" oncontextmenu="return false;">
+                    <div class="boost-text">Boost</div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="market">
+                    <img src="pic/market.png" alt="" class="p-m-pic" oncontextmenu="return false;">
+                    <div class="p-m-text">market</div>
+                </div>
+                <div class="mining" id="mini">
+                    <img src="pic/pickaxe.png" alt="" class="p-mi-pic" oncontextmenu="return false;">
+                    <div class="p-mi-text">mine</div>
+                </div>
+                <div class="friends" id="frie">
+                    <img src="pic/friends.png" alt="" class="p-f-pic" oncontextmenu="return false;">
+                    <div class="p-f-text">friends</div>
+                </div>
+                <div class="earn" id="ear">
+                    <img src="pic/earn.png" alt="" class="p-e-pic" oncontextmenu="return false;"> 
+                    <div class="p-e-text">earn</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-info" id="info-inf">
+        <div class="i-i-content">
+            <span class="i-i-close">&times;</span>
+            <img src="pic/rocket.png" alt="" class="i-i-pic">
+            <div class="i-i-text-1">Увеличьте свою прибыль</div>
+            <div class="i-i-text-2-bold">
+                <div class="i-i-text-2">Перейдите в меню добычи и купите улучшения для вашей биржи, чтобы увеличить</div>  
+            </div>
+            <div class="i-i-text-3">Зарабатывайте оффлайн и копите коины!</div>
+            <div class="i-i-butm">
+                <div class="i-i-butm-text">Начать добычу!</div>
+                <img src="pic/bitcoin.png" alt="" class="i-i-butm-pic">
+            </div>
+        </div>
+    </div>
+
+    <div class="earn-earn" id="earn-ear">
+        <div class="e-e-content">
+            <span class="e-e-close">&times;</span>
+            <img src="pic/bitcoin.png" alt="" class="e-e-pic">
+            <div class="e-e-text1">Заработайте больше монет</div>
+            <div class="e-e-text2">Список заданий</div>
+            <div class="task1">
+                <img src="pic/telegram.png" alt="" class="task1-pic">
+                <div class="task1-text">Присоединятейсь к нашему Telegram</div>
+                <img src="pic/bitcoin.png" alt="" class="task1-pic2">
+                <div class="task1-text2">+5000</div>
+            </div>
+            <div class="task2">
+                <img src="pic/instagram.png" alt="" class="task2-pic">
+                <div class="task2-text">Следите за нашим аккаунтом в Instagram</div>
+                <img src="pic/bitcoin.png" alt="" class="task2-pic2">
+                <div class="task2-text2">+5000</div>
+            </div>
+            <div class="task3">
+                <img src="pic/invite.png" alt="" class="task3-pic">
+                <div class="task3-text">Пригласи 5 друзей</div>
+                <img src="pic/bitcoin.png" alt="" class="task3-pic2">
+                <div class="task3-text2">+10000</div>
+            </div>
+            <div class="task4">
+                <img src="pic/parrot.png" alt="" class="task4-pic">
+                <div class="task4-text">Прокликайте 10000 кликов</div>
+                <img src="pic/bitcoin.png" alt="" class="task4-pic2">
+                <div class="task4-text2">+15000</div>
+            </div>
+            <div class="e-e-text3">Ежедневные задания</div>
+            <div class="task5">
+                <img src="pic/daily-bonus.png" alt="" class="task5-pic">
+                <div class="task5-text">Ежедневная награда</div>
+                <img src="pic/bitcoin.png" alt="" class="task5-pic2">
+                <div class="task5-text2">+1000000</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="friends-friends" id="friends-fri">
+        <div class="f-f-content">
+            <span class="f-f-close">&times;</span>
+            <div class="f-f-text1">Пригласите друзей!</div>
+            <div class="f-f-text2">Вы и ваш друг получите бонусы</div>
+            <div class="invite1">
+                <img src="pic/gift1.png" alt="" class="gift1">
+                <div class="inv1-text">Пригласите друга</div>
+                <img src="pic/bitcoin.png" alt="" class="inv1-pic">
+                <div class="inv1-text2">+5000</div>
+                <div class="inv1-text3">для вас и вашего друга</div>
+            </div>
+            <div class="invite2">
+                <img src="pic/gift2.png" alt="" class="gift2">
+                <div class="inv2-text">Пригласите друга с Telegram Premium</div>
+                <img src="pic/bitcoin.png" alt="" class="inv2-pic">
+                <div class="inv2-text2">+25000</div>
+                <div class="inv2-text3">для вас и вашего друга</div>
+            </div>
+            <div class="f-f-text3">Больше бонусов</div>
+            <div class="f-f-text4">Список ваших друзей</div>
+            <div class="friend-list">
+                <div><span class="friend-list-text">Вы еще никого не пригласили</span></div>
+            </div>
+            <div class="friend-inv-but">
+                <div class="f-i-b-text">Пригласить друга</div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="mine-mine" id="mine-min">
+        <div class="m-m-content">
+            <span class="m-m-close">&times;</span>
+
+            <div class="upgrade" onclick="buyUpgrade(event)">
+                <img src="pic/pistol.png" alt="" class="pistol-pic" draggable="false" />
+                <div class="pistol">CEO</div>
+                <div></br><span class="pistol-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="p-cost-img" draggable="false" />
+                <div></br><span class="pistol-cost">10</span></div>
+            </div>
+            <div class="upgrade2" onclick="buyUpgrade2(event)">
+                <img src="pic/pp.png" alt="" class="pp-pic" draggable="false" />
+                <div class="pp">UP</div>
+                <div></br><span class="pp-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="pp-cost-img" draggable="false" />
+                <div></br><span class="pp-cost">100</span></div>
+            </div>
+            <div class="upgrade3" onclick="buyUpgrade3(event)">
+                <img src="pic/kalash.png" alt="" class="kalash-pic" draggable="false" />
+                <div class="kalash">MEGA</div>
+                <div></br><span class="kalash-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="kh-cost-img" draggable="false" />
+                <div></br><span class="kalash-cost">500</span></div>
+            </div>
+            <div class="upgrade4" onclick="buyUpgrade4(event)">
+                <img src="pic/minigun.png" alt="" class="minigun-pic" draggable="false" />
+                <div class="minigun">HOLLY</div>
+                <div></br><span class="minigun-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="mg-cost-img" draggable="false" />
+                <div></br><span class="minigun-cost">1000</span></div>
+            </div>
+            <div class="upgrade5" onclick="buyUpgrade5(event)">
+                <img src="pic/bazuka.png" alt="" class="bazuka-pic" draggable="false" />
+                <div class="bazuka">DEEP</div>
+                <div></br><span class="bazuka-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="bz-cost-img" draggable="false" />
+                <div></br><span class="bazuka-cost">3000</span></div>
+            </div>
+            <div class="upgrade6" onclick="buyUpgrade5(event)">
+                <img src="pic/tank.png" alt="" class="tank-pic" draggable="false" />
+                <div class="tank">SUCK</div>
+                <div></br><span class="tank-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="tk-cost-img" draggable="false" />
+                <div></br><span class="tank-cost">5000</span></div>
+            </div>
+            <div class="upgrade7" onclick="buyUpgrade5(event)">
+                <img src="pic/plane.png" alt="" class="plane-pic" draggable="false" />
+                <div class="plane">FUCK</div>
+                <div></br><span class="plane-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="pln-cost-img" draggable="false" />
+                <div></br><span class="plane-cost">7000</span></div>
+            </div>
+            <div class="upgrade8" onclick="buyUpgrade5(event)">
+                <img src="pic/bomba.png" alt="" class="bomba-pic" draggable="false" />
+                <div class="bomba">END</div>
+                <div></br><span class="bomba-level">1</span></div>
+                <img src="pic/bitcoin.png" alt="" class="bmb-cost-img" draggable="false" />
+                <div></br><span class="bomba-cost">9000</span></div>
+            </div>
+        
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
